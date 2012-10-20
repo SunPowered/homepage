@@ -4,7 +4,7 @@ html, body {
 	height: 100%;
 }
 
-div, body, ul, li {
+div, body, ul, li, a{
 	margin: 0;
 	padding: 0;
 }
@@ -12,6 +12,10 @@ body {
 	background-image: url('../img/auroraborealisfromspace.jpg');
 	background-repeat:no-repeat;
 	background-size: 100% 100%
+}
+
+li {
+	list-style: none;
 }
 
 #floater {
@@ -23,13 +27,18 @@ body {
 
 #container {
 	position:relative; clear: left;
-	width: 45%;
-	height: 10%;
-	min-width: 400px;
+	width: 75%;
+	height: 8%;
+	min-width: 500px;
 	margin: 0 auto;
 }
 
 nav {
+
+	height: 100%;
+	width: 100%;
+}
+nav ul {
 	display: -webkit-box;
 	display: -moz-box;
 	display: box;
@@ -38,32 +47,42 @@ nav {
 	-moz-box-align: center;
 	box-align: center;
 	
-	height: 100%;
-}
-nav ul {
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+	
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	
+	border: 2px solid black;
+	border-radius: 20px;
 	
 	height: 100%;
-	list-style:none;
-	font-size: 13pt;
+	width: 100%;
+	font-size: 15pt;
 	background: rgba(0,0,0,.6);
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	
 }
 
 nav ul li {
 	text-align: center;
-	min-width: 100px;
+	min-width: 150px;
+	
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
 }
 
 nav ul li a {
+	display:block;
 	text-decoration: none;
 	color: rgba(200, 200, 200, 1);
-	padding: 5px;
 }
 
 footer {
 	font-size:8px;
 	position: absolute; right:0;
+	color: white;
 }
