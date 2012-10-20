@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/auroraborealisfromspace.jpg');
+	background-repeat:no-repeat;
+	background-size: 100% 100%
+}
+
+#floater {
+	position: relative;
+	float: left;
+	width: 1px;
+	height: 50%;
+}
+
+#container {
+	position:relative; clear: left;
+	width: 45%;
+	height: 10%;
+	min-width: 400px;
+	margin: 0 auto;
+}
+
+#menu {
+	position: relative;
+	height: 100%;
+}
+#menu ul {
+	position: relative;
+	height: 100%;
+	list-style:none;
+	font-size: 13pt;
+	background: rgba(0,0,0,.6);
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#menu ul li {
+	float: left;
+}
+
+#menu ul li a {
+	text-decoration: none;
+	display:block;
+	color: rgba(200, 200, 200, 1);
+	padding: 5px;
+}
+
+footer {
+	font-size:8px;
+	position: absolute; right:0;
+}
