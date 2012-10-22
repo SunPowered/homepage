@@ -7,6 +7,8 @@
 		for (i=0; i<lis.length; i++){
 			lis[i].onmouseover = liMenuMouseOverHandler;
 		}
+		
+		menu.onmouseout = hide_all_content;
 	};
 	
 	function get_content() {
