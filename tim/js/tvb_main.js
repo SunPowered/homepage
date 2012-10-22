@@ -1,6 +1,7 @@
 
 	
 window.onload = function(){
+	hide_all_content();
 	var content = get_content();
 	var menu = document.getElementsByClassName('menu')[0];
 	lis = menu.children;
@@ -24,7 +25,7 @@ function div_id_to_content(div_id) {
 }
 function hide_all_content() {
 	//content_div = document.getElementByClassName('content')[0];
-	var content = get_content()
+	var content = get_content();
 	elements = content.children;
 	for (i=0; i<elements.length; i++) {
 		elements[i].style.display = 'none';
