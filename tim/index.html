@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html>
+<!-- <html manifest='tvb.appcache'> -->
 <head>
-	<meta charset="UTF-8" manuscript='tvb.appcache'>
+	<meta charset="UTF-8">
 	<title>Tim van Boxtel</title>
-	<link rel="stylesheet" href="css/style.css">
-	<!-- 
-	<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35742130-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
- 	-->
+	<link rel="stylesheet" type='text/css' href="css/style.css">
+	<script>
+	
+	</script>
 </head>
 <body>
 
-<div id='container'>
-	
-	<div id='main'>
+<div class='main'>
 		
-		<div id="menu">
-			<ul>
-				<li><a href='#about'>Tim van Boxtel</a>
-				<li><a href='wp'>Blog</a></li>
-				<li><a href='projects/index.html'>Projects</a></li>
-				<li><a href='resume/index.html'>CV</a></li>
-				<li><a href='contact.html'>Contact</a></li>
-			</ul>
-		</div>
+	<ul class='menu'>
+		<li id='li_home'><a href='#'>Home</a>
+		<li id='li_blog'><a href='#'>Blog</a></li>
+		<li id='li_projects'><a href='#'>Projects</a></li>
+		<li id='li_history'><a href='#'>CV</a></li>
+		<li id='li_contact'><a href='#'>Contact</a></li>
+	</ul>
 	
+	<div class='dynamic_content'>
+	
+		<div id="content_home">
+			<h1>Welcome</h1>
+			<p>This is my interface to the web.  Check out the stuff that may or may not be available</p>
+		</div>
 		
-		<div id="copyright">
-			Copyright &copy; 2012 - tim.vanboxtel.ca
+		<div id="content_blog">
+			<h1>Blog</h1>
+			<p>Where I jot down notes or rants I feel need to be set free</p>
 		</div>
-	
+		
+		<div id="content_projects">
+			<h1>Projects</h1>
+			<p>A collection of projects I have documented</p>
+		</div>
+		
+		<div id="content_history">
+			<h1>CV</h1>
+			<p>My web cv, detailing academic and professional experience</p>
+		</div>
+		
+		<div id="content_contact">
+			<h1>Contact Me</h1>
+			<p>Feel free to send an email to info AT tim DOT vanboxtel DOT ca</p>
+		</div>
+		
+	</div>
+	<div id="copyright">
+		&copy; 2012 Tim van Boxtel
 	</div>
 </div>
+
 <div id='bg_credit'><i>Aurora Image Credit: NASA</i></div>
 </body>
 </html>

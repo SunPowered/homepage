@@ -2,98 +2,83 @@
 
 html, body {
 	height: 100%;
-}
-
-div, body, ul, li, a{
 	margin: 0;
 	padding: 0;
 }
 
-#container, #main, #menu, #filler, ul, li {
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
-	
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	box-pack: center;
-	
-	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
-	box-orient: horizontal;
-	
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	box-align: center;
-}
-
 body {
+	font-family: Trebuchet MS, Lucidia Sans Unicode, Arial, sans-serif;
+	color: rgba(255, 255, 255, 1);
+	
 	background-color: black;
 	background-image: url('../img/aurora_from_space.jpg');
 	background-repeat:no-repeat;
 	background-size: auto 100%;
 	background-position: center;
-	color: rgba(255, 255, 255, 1);
 }
 
-li {
-	list-style: none;
-}
 
-#container {
+.main {
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	
+	box-pack: start;
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	
+	box-align: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	
 	height: 100%;
-	margin: 0 auto;
-	width: 100%;
-	
-
-	-webkit-box-orient: vertical;
-	-moz-box-orient: vertical;
-	box-orient: vertical;
-	
 }
 
-#main {
-	-webkit-box-orient: vertical;
-	-moz-box-orient: vertical;
-	box-orient: vertical;
-	padding-bottom: 12%;
+.menu {
+	padding: 0px;
+	margin: 0;
+	margin-top: 10%;
 	
+	display: inherit;
+	
+	box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	
+	box-pack: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;	
+	
+	list-style: none;
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+	border: 2px solid rgba(255,255,255,0.6);
+	
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
-#menu {
-	height: 8%;
-	max-height: 60px;
-	border: 2px solid rgba(255, 255, 255, 0.4);
-	border-radius: 20px;
-	background: rgba(0,0,0,.6);
-}
-#menu ul {
-	font-size: 15pt;
-	
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	
-}
-
-#menu ul li {
+.menu a{
+	margin: 0;
+	display: block;
+	text-decoration: none;
+	color: rgba(200, 200, 200, 1);
 	
 	text-align: center;
 	min-width: 100px;
-	padding: 15px;
+	padding: 8px;
 }
 
-#menu ul li:hover {
-	-webkit-box-shadow: 0 0 10px rgba(255,255,255,0.5);
-	-moz-box-shadow: 0 0 10px rgba(255,255,255,0.5);
-	box-shadow: 0 0 10px rgba(255,255,255,0.5);
-}
 
-#menu ul li:onclick {
+.dynamic_content {
+	display: none;
 	
-}
-#menu ul li a {
-	display:block;
-	text-decoration: none;
-	color: rgba(200, 200, 200, 1);
 	
 }
 
