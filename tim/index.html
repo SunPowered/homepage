@@ -4,26 +4,37 @@
 	<meta charset="UTF-8">
 	<title>Tim van Boxtel</title>
 	<link rel="stylesheet" type='text/css' href="./css/style.css">
-	<script src='./js/tvb_main.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>
+	(function hide_content() {
+		$(".content").hide()
+	});
+	(function slide_down(content_id) {
+		$(".content"+)
+	});
+	</script>
 </head>
 <body> 
 
 <div class='main'>
 		
 	<ul class='menu'>
-		<li id='li_home'><a href='#'>Home</a>
+		<li id='li_home'><a href='#'>Home</a></li>
+		<div id="content_home" class='content'>
+			<h1>Welcome</h1>
+			<p>This is my interface to the web.  Check out the stuff that may or may not be available</p>
+		</div>
 		<li id='li_blog'><a href='#'>Blog</a></li>
+		
 		<li id='li_projects'><a href='#'>Projects</a></li>
+		
 		<li id='li_history'><a href='#'>CV</a></li>
 		<li id='li_contact'><a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#118;&#97;&#110;&#98;&#111;&#120;&#116;&#101;&#108;&#46;&#99;&#97;'>&#67;&#111;&#110;&#116;&#97;&#99;&#116;</a></li>
 	</ul>
 	
 	<div class='content'>
 	
-		<div id="content_home" class='content_element'>
-			<h1>Welcome</h1>
-			<p>This is my interface to the web.  Check out the stuff that may or may not be available</p>
-		</div>
+		
 		
 		<div id="content_blog" class='content_element'>
 			<h1>Blog</h1>
