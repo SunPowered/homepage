@@ -1,7 +1,10 @@
 CACHE MANIFEST
-#2012-10-20 v.0.0.3
+#2012-10-22 v.0.0.20
 css/style.css
 js/tvb_main.js
-index.html
+#index.html
 img/aurora_from_space.jpg
+http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
 
+NETWORK:
+*
