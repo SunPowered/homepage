@@ -1,6 +1,6 @@
 <?php
-include db_connect.php;
-include common.php;
+include 'db_connect.php';
+include 'common.php';
 
 secure_session_start();
 
