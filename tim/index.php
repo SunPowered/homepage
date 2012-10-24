@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<?php ini_set('error_reporting', E_ALL);?>
 <html manifest='tvb.appcache'>
 <head>
 	<meta charset="UTF-8">
 	<title>Tim van Boxtel</title>
-	<link rel="stylesheet" type='text/css' href="./css/style.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<link rel='stylesheet' type='text/css' href='css/jquery-ui-1.9.0.custom.css'>
+	<script src="js/jquery-1.8.2.js"></script>
+	<script src="js/jquery-ui-1.9.0.custom.js"></script>
+	<script src='js/sha512.js'></script>
 	<script type='text/javascript' src='js/tvb_main.js'></script>
+	<link rel="stylesheet" type='text/css' href="./css/style.css">
 </head>
 <body> 
 
@@ -55,11 +59,13 @@
 
 <div id='bg_credit'><i>Aurora Image Credit: NASA</i></div>
 <div><a class='dev_login' href='#'>Dev. Login</a></div>
-<div class='login' style='display: none'>
-	<form action='login.php' method='get'>
-		user: <input type='text' id='username'/><br/>
-		password: <input type='password' id='password'/><br/>
-		<input type='submit' value='Submit'/>
+<div id='login' class='login' title='Login' style='display: none'>
+	<form id='login_form' action='php/process_login.php' method='post' name='login_form'>
+		<label class='label_login'>Email:</label>
+		<input type='email' id='email'/><br/>
+		<label class='label_login'>Password:</label>
+		<input type='password' id='password'/><br/>
+		<input type='submit' value='Submit' onclick='formhash(this.form, this.form.password)'/>
 	</form>
 </div>
 </body>

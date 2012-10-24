@@ -150,10 +150,11 @@ a.dev_login {
 	color: rgba(200, 200, 200, 1);
 }
 
-.login {
+div#login {
 	display: none;
-	
-	padding: 10px;
-	width: 200px;
-	height: 100px;
+	padding: 2px;
+		
 }
+
+.label_login {
+	}

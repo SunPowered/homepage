@@ -1,3 +1,19 @@
+function formhash(form, password) {
+	var p = document.createElement('input');
+	
+	form.appendChild(p);
+	
+	p.name = 'p';
+	p.type='hidden';
+	p.value = hex_sha512(password.value);
+	
+	
+	
+	password.value = "";
+	
+	form.submit();
+	
+}
 $(function() {
 		
 		$(".menu li").mouseenter(
@@ -18,35 +34,11 @@ $(function() {
 
 // Login Screen
 $(function () {
-	$(document).on('click', 'a.dev_login', function () {})
-});
-//Custom rich user experience - jquery.fileDownload.js & jQuery UI Dialog
-//uses the optional "options" argument
-//
-//      the below uses jQuery "on" http://api.jquery.com/on/ (jQuery 1.7 + required, otherwise use "delegate" or "live") so that any 
-//      <a class="fileDownload..."/> that is ever loaded into an Ajax site will automatically use jquery.fileDownload.js
-//      if you are using "on":
-//          you should generally be able to reduce the scope of the selector below "document" but it is used in this example so it
-//          works for possible dynamic manipulation in the entire DOM
-//
-$(function () {
-    $(document).on("click", "a.fileDownloadCustomRichExperience", function () {
+	$(document).on('click', 'a.dev_login', function () {
+		
+		//alert('login modal: ' + $login_model);
+		$("#login").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
 
-        var $preparingFileModal = $("#preparing-file-modal");
-
-        $preparingFileModal.dialog({ modal: true });
-
-        $.fileDownload($(this).attr('href'), {
-            successCallback: function (url) {
-
-                $preparingFileModal.dialog('close');
-            },
-            failCallback: function (responseHtml, url) {
-
-                $preparingFileModal.dialog('close');
-                $("#error-modal").dialog({ modal: true });
-            }
-        });
-        return false; //this is critical to stop the click event which will trigger a normal file download!
-    });
+		$("#login").dialog('open');
+	});
 });

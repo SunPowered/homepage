@@ -4,9 +4,9 @@ function secure_session_start() {
 	$secure = false;
 	$http_only = true;
 	
-	init_set('session.use_only_cookies', 1);
-	$cookie_params = session_get_cookies_params();
-	session_set_cookies_params($cookie_params['lifetime'], $cookie_params['path'], $cookie_params['domain'], $secure, $http_only);
+	ini_set('session.use_only_cookies', 1);
+	$cookie_params = session_get_cookie_params();
+	session_set_cookie_params($cookie_params['lifetime'], $cookie_params['path'], $cookie_params['domain'], $secure, $http_only);
 	session_name($session_id);
 	session_start();
 	session_regenerate_id(true);
