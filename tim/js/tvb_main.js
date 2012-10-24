@@ -1,42 +1,52 @@
+$(function() {
+		
+		$(".menu li").mouseenter(
+				function(){
+					var $this=$(this);
+					//$('.content').stop(true).hide();
+					
+					
+					$('.content').hide();
+					$('#'+this.id.replace('li','content')).stop(true, true).slideDown(500, 'swing');
+				}
+				//function(){
+				//	$('#'+this.id.replace('li','content')).stop(true, true).slideUp('fast');
+				//}
+				);
+		//$('li.content').hide();
+	});
 
-	
-window.onload = function(){
-	hide_all_content();
-	var content = get_content();
-	var menu = document.getElementsByClassName('menu')[0];
-	lis = menu.children;
-	for (i=0; i<lis.length; i++){
-		lis[i].onmouseover = liMenuMouseOverHandler;
-	}
-	
-	menu.onmouseout = hide_all_content;
-};
+// Login Screen
+$(function () {
+	$(document).on('click', 'a.dev_login', function () {})
+});
+//Custom rich user experience - jquery.fileDownload.js & jQuery UI Dialog
+//uses the optional "options" argument
+//
+//      the below uses jQuery "on" http://api.jquery.com/on/ (jQuery 1.7 + required, otherwise use "delegate" or "live") so that any 
+//      <a class="fileDownload..."/> that is ever loaded into an Ajax site will automatically use jquery.fileDownload.js
+//      if you are using "on":
+//          you should generally be able to reduce the scope of the selector below "document" but it is used in this example so it
+//          works for possible dynamic manipulation in the entire DOM
+//
+$(function () {
+    $(document).on("click", "a.fileDownloadCustomRichExperience", function () {
 
-function get_content() {
-	return document.getElementsByClassName('content')[0];
-}
-function list_id_to_content(li_id) {
-	return li_id.replace('li', 'content');
-	
-}
+        var $preparingFileModal = $("#preparing-file-modal");
 
-function div_id_to_content(div_id) {
-	return 'content_'+div_id;
-}
-function hide_all_content() {
-	//content_div = document.getElementByClassName('content')[0];
-	var content = get_content();
-	elements = content.children;
-	for (i=0; i<elements.length; i++) {
-		elements[i].style.display = 'none';
-	content.style.display = 'none';
-	}
-}
-function liMenuMouseOverHandler(e) {
-	hide_all_content();
-	
-	get_content().style.display = 'block';
-	//alert(this.id);
-	var contentId = list_id_to_content(this.id);
-	document.getElementById(contentId).style.display = 'block';
-}
+        $preparingFileModal.dialog({ modal: true });
+
+        $.fileDownload($(this).attr('href'), {
+            successCallback: function (url) {
+
+                $preparingFileModal.dialog('close');
+            },
+            failCallback: function (responseHtml, url) {
+
+                $preparingFileModal.dialog('close');
+                $("#error-modal").dialog({ modal: true });
+            }
+        });
+        return false; //this is critical to stop the click event which will trigger a normal file download!
+    });
+});

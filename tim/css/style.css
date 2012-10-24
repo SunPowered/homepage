@@ -10,6 +10,7 @@ html, body {
 
 body {
 	font-family: 'Trebuchet MS', 'Lucidia Sans Unicode', Arial, sans-serif;
+	font-szie: 1em;
 	color: rgba(255, 255, 255, 1);
 	
 	background-color: black;
@@ -18,6 +19,13 @@ body {
 	background-size: auto 100%;
 	background-position: center;
 	
+	}
+
+a {
+	text-decoration: none;
+	color: rgba(200, 200, 200, 1);
+}
+.main {
 	display: box;
 	display: -webkit-box;
 	display: -moz-box;
@@ -29,37 +37,25 @@ body {
 	box-pack: start;
 	-webkit-box-pack: start;
 	-moz-box-pack: start;
-	
+
 	box-align: center;
 	-webkit-box-align: center;
 	-moz-box-align: center;
-}
-
-
-.main {
-	display: inherit;
-	
-	margin-top: 200px;
-	
-	box-align: center;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	
-	box-pack: start;
-	-webkit-box-pack: start;
-	-moz-box-pack: start;
 	
 	box-orient: vertical;
 	-webkit-box-orient: vertical;
 	-moz-box-orient: vertical;
 	
+	height: 100%;
 	width: 100%;
+	
 }
 
 
 .menu {
 	padding: 0px;
 	margin: 0;
+	margin-top: 100px;
 	
 	max-width: 75%;
 	min-width: 300px;
@@ -84,16 +80,15 @@ body {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	
-	overflow:auto;
+	overflow: auto;
+	
 }
 
 
 .menu a{
 	margin: 0;
 	display: block;
-	text-decoration: none;
-	color: rgba(200, 200, 200, 1);
-	
+
 	text-align: center;
 	min-width: 100px;
 	padding: 8px;
@@ -117,7 +112,6 @@ body {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	
-	
     
     padding: 8px;
     width: 600px;
@@ -125,22 +119,14 @@ body {
 
 
 .content h1 {
-	font-size: 16pt;
-	margin: 3px;
-	padding: 0;
-}
-
-
-
-.content h1 {
-	font-size: 16pt;
+	font-size: 1.5em;
 	margin: 3px;
 	padding: 0;
 }
 
 
 #copyright {
-	font-size:10pt;
+	font-size: 0.8em;
 	text-align: center;
 	margin-top: 5px;
 	width: 100%;
@@ -148,8 +134,26 @@ body {
 
 
 #bg_credit {
-	font-size: 8pt;
+	font-size: 0.6em;
 	margin: 5px;
 	position: absolute;
 	bottom: 0; right:0;
+}
+
+a.dev_login {
+	text-decoration: none;
+	font-size: 0.6em;
+	font-style: italic;
+	margin: 5px;
+	position: absolute;
+	bottom: 0; left:0;
+	color: rgba(200, 200, 200, 1);
+}
+
+.login {
+	display: none;
+	
+	padding: 10px;
+	width: 200px;
+	height: 100px;
 }
