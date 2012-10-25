@@ -153,8 +153,10 @@ a.dev_login {
 div#login {
 	display: none;
 	padding: 2px;
-		
+	margin: 0;	
 }
 
 .label_login {
+	
+
 	}

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php ini_set('error_reporting', E_ALL);?>
+<?php 
+error_reporting(E_ALL); 
+ini_set('display_errors', 1);?>
 <html manifest='tvb.appcache'>
 <head>
 	<meta charset="UTF-8">
@@ -61,11 +63,11 @@
 <div><a class='dev_login' href='#'>Dev. Login</a></div>
 <div id='login' class='login' title='Login' style='display: none'>
 	<form id='login_form' action='php/process_login.php' method='post' name='login_form'>
-		<label class='label_login'>Email:</label>
-		<input type='email' id='email'/><br/>
-		<label class='label_login'>Password:</label>
-		<input type='password' id='password'/><br/>
-		<input type='submit' value='Submit' onclick='formhash(this.form, this.form.password)'/>
+		<label class='label_login'><p>Email:</p>
+		<input type='email' id='email'/></label>
+		<label class='label_login'><p>Password:</p>
+		<input type='password' id='password'/></label>
+		<button type='submit' onclick='formhash(this.form, this.form.password);'>Submit</button>
 	</form>
 </div>
 </body>

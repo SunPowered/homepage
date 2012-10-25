@@ -16,12 +16,20 @@ if (isset($_POST['email'], $_POST['p'])) {
 		if (isset($_SERVER['HTTP_REFERER'])) {
 			$ref_url = $_SERVER['HTTP_REFERER'];
 			header("Location: $ref_url");
+			exit;
 		} else {
 			echo "Login Failed";
 		}
 	}
 	
 } else {
+	//Login failed, go back to where you came from
+	if (isset($_SERVER['HTTP_REFERER'])) {
+		$ref_url = $_SERVER['HTTP_REFERER'];
+		header("Location: $ref_url");
+		exit;
+	} else {
 	echo 'Invalid request';
-}
+	}
+}	
 ?>
