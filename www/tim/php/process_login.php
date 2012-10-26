@@ -1,6 +1,8 @@
 <?php
-include 'db_connect.php';
-include 'common.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once '../../../lib/php/db_connect.php';
+include '../../../lib/php/common.php';
 
 secure_session_start();
 
@@ -10,7 +12,7 @@ if (isset($_POST['email'], $_POST['p'])) {
 	
 	if (login($email, $password, $mysqli) == true) {
 		echo "Login Success";
-		header('Location: ./dev/');
+		header('Location: ../dev/');
 	} else {
 		//Login failed, go back to where you came from
 		if (isset($_SERVER['HTTP_REFERER'])) {

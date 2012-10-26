@@ -1,5 +1,4 @@
 <?php
-
 define("HOST", 'localhost');
 define("USER", 'www-db');
 define("PASSWORD", 'Emcg5TWrguo_nSGm');

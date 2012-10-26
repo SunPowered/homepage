@@ -1,18 +1,11 @@
 function formhash(form, password) {
 	var p = document.createElement('input');
-	
 	form.appendChild(p);
-	
 	p.name = 'p';
 	p.type='hidden';
 	p.value = hex_sha512(password.value);
-	
-	
-	
 	password.value = "";
-	
 	form.submit();
-	
 }
 $(function() {
 		
@@ -22,8 +15,8 @@ $(function() {
 					//$('.content').stop(true).hide();
 					
 					
-					$('.content').hide();
-					$('#'+this.id.replace('li','content')).stop(true, true).slideDown(500, 'swing');
+					$('.content').stop().slideUp(200);
+					$('#'+this.id.replace('li','content')).stop(true).slideDown(500, 'swing');
 				}
 				//function(){
 				//	$('#'+this.id.replace('li','content')).stop(true, true).slideUp('fast');

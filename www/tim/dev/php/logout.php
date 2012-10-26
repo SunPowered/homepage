@@ -1,5 +1,5 @@
 <?php
-include 'common.php';
+include '../../../../lib/php/common.php';
 
 secure_session_start();
 
@@ -11,5 +11,5 @@ setcookie(session_name(), "", time()-42000, $cookie_params['path'], $cookie_para
 
 session_destroy();
 
-header('Location: ./');
+header('Location: ../../');
 ?>

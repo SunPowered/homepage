@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?php 
-error_reporting(E_ALL); 
+error_reporting(E_ALL);
 ini_set('display_errors', 1);?>
+<!DOCTYPE html>
 <html manifest='tvb.appcache'>
 <head>
 	<meta charset="UTF-8">
@@ -61,12 +61,12 @@ ini_set('display_errors', 1);?>
 
 <div id='bg_credit'><i>Aurora Image Credit: NASA</i></div>
 <div><a class='dev_login' href='#'>Dev. Login</a></div>
-<div id='login' class='login' title='Login' style='display: none'>
+<div id='login' class='login' title='Login' style='display: none; margin:0; padding: 2px;'>
 	<form id='login_form' action='php/process_login.php' method='post' name='login_form'>
-		<label class='label_login'><p>Email:</p>
-		<input type='email' id='email'/></label>
-		<label class='label_login'><p>Password:</p>
-		<input type='password' id='password'/></label>
+		<label class='label_login'>Email:
+		<input type='email' name='email'/></label>
+		<label class='label_login'>Password:
+		<input type='password' name='password'/></label>
 		<button type='submit' onclick='formhash(this.form, this.form.password);'>Submit</button>
 	</form>
 </div>

@@ -14,10 +14,10 @@ function secure_session_start() {
 
 function login($email, $password, $mysqli) {
 	if ($stmt = $mysqli->prepare("SELECT id, user, password, salt FROM members WHERE email = ? LIMIT 1")){
-		$stmt->bind_params('s', $email);
+		$stmt->bind_param('s', $email);
 		$stmt->execute();
 		$stmt->store_result();
-		$stmt->bin_result($user_id, $user_name, $db_password, $db_salt);
+		$stmt->bind_result($user_id, $user_name, $db_password, $db_salt);
 		$stmt->fetch();
 		$password = hash('sha512', $password.$db_salt);
 		
@@ -30,7 +30,7 @@ function login($email, $password, $mysqli) {
 				$user_id = preg_replace('/[^0-9]+/', "", $user_id);
 				$_SESSION['user_id'] = $user_id;
 				
-				$user_name = preg_replace('/[^a-zA-Z0-9_/-]+/', "", $user_name);
+				$user_name = preg_replace('/[^a-zA-Z0-9_\-]+/', "", $user_name);
 				$_SESSION['user_name'] = $user_name;
 				
 				$_SESSION['login_string'] = hash('sha512', $password.$ip_address.$user_agent);
@@ -59,7 +59,7 @@ function login_check($mysqli) {
 		
 		
 		if ($stmt = $mysqli->prepare("SELECT password FROM members WHERE id = ? LIMIT 1")) {
-			$stmt->bind_params('s', $user_id);
+			$stmt->bind_param('s', $user_id);
 			$stmt->execute();
 			$stmt->store_result();
 			
